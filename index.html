@@ -18,7 +18,6 @@
                 <img src="assets/logo.png" alt="" width="38" height="38">
                 <span><strong>ACLC</strong><small>STA. MARIA / CAMPUS ARCHIVE</small></span>
             </a>
-            <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">SOUND: OFF</button>
         </header>
 
         <div class="terminal-content">
@@ -86,9 +85,14 @@
                     <p class="locked-message">[ LOCKED ]</p>
                 </article>
                 <p class="archive-disclaimer">Preview archive only. Sample records are illustrative, not live school announcements or verified student submissions.</p>
-                <button class="terminal-button terminal-button--primary" type="button" data-decrypt-next>
-                    [ DECRYPT NEXT ]
-                </button>
+                <div class="archive-controls">
+                    <button class="terminal-button terminal-button--secondary" type="button" data-previous-record disabled>
+                        [ PREVIOUS ]
+                    </button>
+                    <button class="terminal-button terminal-button--primary" type="button" data-decrypt-next>
+                        [ DECRYPT NEXT ]
+                    </button>
+                </div>
                 <p class="interaction-status" data-archive-status role="status" aria-live="polite"></p>
                 <div class="archive-complete" data-archive-complete hidden>
                     <p>ALL FOUR RECORDS RECOVERED.</p>
