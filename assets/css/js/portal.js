@@ -273,12 +273,14 @@
     });
 
     const archiveButton = document.querySelector("[data-decrypt-next]");
+    const previousRecordButton = document.querySelector("[data-previous-record]");
     const recordContainer = document.querySelector("[data-record]");
     const recoveredCount = document.querySelector("[data-files-recovered]");
     const archiveProgress = document.querySelector("[data-archive-progress]");
     const archiveStatus = document.querySelector("[data-archive-status]");
     const completePanel = document.querySelector("[data-archive-complete]");
     let recoveredRecords = 0;
+    let currentRecordIndex = -1;
 
     function renderRecord(record, index) {
         if (!recordContainer) {
@@ -314,24 +316,50 @@
         }
     }
 
+    function updateArchiveControls() {
+        if (previousRecordButton) {
+            previousRecordButton.disabled = currentRecordIndex <= 0;
+        }
+        if (archiveButton) {
+            archiveButton.textContent =
+                recoveredRecords === records.length && currentRecordIndex === records.length - 1
+                    ? "[ COMPLETE ARCHIVE ]"
+                    : "[ DECRYPT NEXT ]";
+        }
+    }
+
+    function showRecoveredRecord(index) {
+        currentRecordIndex = index;
+        renderRecord(records[index], index);
+        if (archiveStatus) {
+            archiveStatus.textContent = `FILE ${index + 1} OF ${recoveredRecords} RECOVERED.`;
+        }
+        updateArchiveControls();
+    }
+
     archiveButton?.addEventListener("click", () => {
+        if (currentRecordIndex < recoveredRecords - 1) {
+            showRecoveredRecord(currentRecordIndex + 1);
+            playTone(650 + (currentRecordIndex + 1) * 35);
+            return;
+        }
+
         if (recoveredRecords < records.length) {
             const recordIndex = recoveredRecords;
             renderRecord(records[recordIndex], recordIndex);
             recoveredRecords += 1;
+            currentRecordIndex = recordIndex;
             if (recoveredCount) {
                 recoveredCount.textContent = String(recoveredRecords);
             }
             if (archiveProgress) {
                 archiveProgress.value = recoveredRecords;
-                archiveProgress.textContent = `${recoveredRecords} / ${records.length}`;
+                archiveProgress.textContent = `${recoveredRecords} / 5`;
             }
             if (archiveStatus) {
                 archiveStatus.textContent = `FILE ${recoveredRecords} OF ${records.length} RECOVERED.`;
             }
-            archiveButton.textContent = recoveredRecords === records.length
-                ? "[ COMPLETE ARCHIVE ]"
-                : "[ DECRYPT NEXT ]";
+            updateArchiveControls();
             playTone(650 + recoveredRecords * 35);
             return;
         }
@@ -347,10 +375,24 @@
         playTone(920);
     });
 
+    previousRecordButton?.addEventListener("click", () => {
+        if (currentRecordIndex <= 0) {
+            return;
+        }
+        if (completePanel) {
+            completePanel.hidden = true;
+        }
+        if (archiveButton) {
+            archiveButton.hidden = false;
+        }
+        showRecoveredRecord(currentRecordIndex - 1);
+    });
+
     document.querySelector("[data-restart]")?.addEventListener("click", () => {
         segmentsDecrypted = 0;
         challengeComplete = false;
         recoveredRecords = 0;
+        currentRecordIndex = -1;
         resetLockTarget();
         if (segmentCount) {
             segmentCount.textContent = "0 / 3";
@@ -381,8 +423,8 @@
         }
         if (archiveButton) {
             archiveButton.hidden = false;
-            archiveButton.textContent = "[ DECRYPT NEXT ]";
         }
+        updateArchiveControls();
         showStage("alert");
         initializeButton?.focus();
     });
