@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070d18">
+    <meta name="description" content="Unlock the ACLC College of Sta. Maria campus archive.">
+    <title>ACLC Campus | Sta. Maria</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="assets/css/portal.css">
+    <script src="assets/css/js/portal.js" defer></script>
+</head>
+<body class="terminal-page archive-page">
+    <a class="skip-link" href="#portal-main">Skip to the campus archive</a>
+    <main class="portal-shell" id="portal-main">
+        <header class="portal-bar">
+            <a class="portal-brand" aria-label="ACLC College of Sta. Maria campus archive">
+                <img src="assets/logo.png" alt="" width="38" height="38">
+                <span><strong>ACLC</strong><small>STA. MARIA / CAMPUS ARCHIVE</small></span>
+            </a>
+            <button class="sound-toggle" type="button" data-sound-toggle aria-pressed="false">SOUND: OFF</button>
+        </header>
+
+        <div class="terminal-content">
+            <section class="terminal-panel alert-panel" data-stage="alert" aria-labelledby="alert-title">
+                <p class="panel-index">INCOMING TRANSMISSION <span>01 / 04</span></p>
+                <p class="signal-line" aria-hidden="true"><i></i> SIGNAL INTERRUPTED</p>
+                <h1 id="alert-title">SYSTEM ALERT</h1>
+                <div class="alert-copy">
+                    <p>UNAUTHORIZED ACCESS DETECTED</p>
+                    <p>ANOMALOUS ACTIVITY FOUND IN THE CAMPUS ARCHIVE</p>
+                    <p>ENCRYPTED SCHOOL RECORDS DISCOVERED</p>
+                </div>
+                <button class="terminal-button terminal-button--primary" type="button" data-initialize>
+                    [ INITIALIZE OVERRIDE ]
+                </button>
+                <p class="panel-footnote">ACLC COLLEGE OF STA. MARIA <span>·</span> INTERACTIVE PREVIEW / NO AUTHENTICATION</p>
+            </section>
+
+            <section class="terminal-panel decrypt-panel" data-stage="decrypt" aria-labelledby="decrypt-title" hidden>
+                <p class="panel-index">SECURITY PROTOCOL <span>02 / 04</span></p>
+                <p class="eyebrow">ACCESS CHALLENGE / 3 SEGMENTS</p>
+                <h1 id="decrypt-title">DECRYPTION MODULE</h1>
+                <p class="panel-description">Press EXECUTE LOCK when the moving marker enters the highlighted zone. Keyboard: focus the button and press Space or Enter.</p>
+                <div class="lock-meter" aria-label="Timing challenge">
+                    <span class="lock-zone" aria-hidden="true"></span>
+                    <span class="lock-marker" data-lock-marker aria-hidden="true"></span>
+                </div>
+                <div class="meter-labels"><span>00</span><span>LOCK ZONE</span><span>FF</span></div>
+                <p class="segment-count">SEGMENTS DECRYPTED: <span data-segment-count>0 / 3</span></p>
+                <button class="terminal-button terminal-button--primary execute-button" type="button" data-execute-lock>
+                    [ EXECUTE LOCK ]
+                </button>
+                <p class="interaction-status" data-game-status role="status" aria-live="polite">Awaiting input...</p>
+            </section>
+
+            <section class="terminal-panel profile-panel" data-stage="profile" aria-labelledby="profile-title" hidden>
+                <p class="panel-index">TARGET IDENTIFIED <span>03 / 04</span></p>
+                <p class="eyebrow">CAMPUS NODE / IDENTITY VERIFIED</p>
+                <div class="school-target">
+                    <img class="school-campus-photo" src="assets/logo.png" alt="ACLC College campus building" width="110" height="110">
+                    <div>
+                        <h1 id="profile-title">ACLC COLLEGE<br>OF STA. MARIA</h1>
+                        <p>NETWORK: AMA EDUCATION SYSTEM</p>
+                        <p>STATUS: CAMPUS NODE VERIFIED</p>
+                    </div>
+                </div>
+                <p class="panel-description">Campus archive located. Five records are waiting to be recovered.</p>
+                <button class="terminal-button terminal-button--primary" type="button" data-open-archive>
+                    [ ACCESS ARCHIVE ]
+                </button>
+            </section>
+
+            <section class="terminal-panel archive-panel" data-stage="archive" aria-labelledby="archive-title" hidden>
+                <p class="panel-index">RECORD RECOVERY <span>04 / 04</span></p>
+                <p class="eyebrow">ROOT ACCESS GRANTED · CAMPUS ARCHIVE</p>
+                <h1 id="archive-title">CAMPUS_ARCHIVE.exe</h1>
+                <div class="archive-progress">
+                    <div class="progress-heading">
+                        <span>FILES RECOVERED</span>
+                        <span><b data-files-recovered>0</b> / 4</span>
+                    </div>
+                    <progress max="4" value="0" data-archive-progress aria-label="Archive files recovered">0 / 4</progress>
+                </div>
+                <article class="recovered-record" data-record aria-live="polite">
+                    <p class="locked-message">[ LOCKED ]</p>
+                </article>
+                <p class="archive-disclaimer">Preview archive only. Sample records are illustrative, not live school announcements or verified student submissions.</p>
+                <button class="terminal-button terminal-button--primary" type="button" data-decrypt-next>
+                    [ DECRYPT NEXT ]
+                </button>
+                <p class="interaction-status" data-archive-status role="status" aria-live="polite"></p>
+                <div class="archive-complete" data-archive-complete hidden>
+                    <p>ALL FOUR RECORDS RECOVERED.</p>
+                    <p class="panel-description">The campus archive is ready to explore.</p>
+                    <a class="terminal-button terminal-button--secondary" href="programs.html">[ OPEN PROGRAM INDEX ]</a>
+                    <button class="text-button" type="button" data-restart>[ RESTART ARCHIVE ]</button>
+                </div>
+            </section>
+            <p class="screen-status" data-screen-status role="status" aria-live="polite"></p>
+        </div>
+
+        <footer class="portal-footer">
+            <span>INTERACTIVE PREVIEW / NO LIVE SCHOOL RECORDS</span>
+        </footer>
+    </main>
+</body>
+</html>
