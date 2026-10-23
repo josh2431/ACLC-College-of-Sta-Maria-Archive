@@ -8,6 +8,13 @@
     <title>ACLC Campus | Sta. Maria</title>
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="assets/css/portal.css">
+    <script>
+        try {
+            sessionStorage.setItem("aclc-programs-entry", "granted");
+        } catch (error) {
+            console.error("Unable to initialize program page access.", error);
+        }
+    </script>
     <script src="assets/css/js/portal.js" defer></script>
 </head>
 <body class="terminal-page archive-page">
