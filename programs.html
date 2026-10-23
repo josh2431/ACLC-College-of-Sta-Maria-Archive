@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#070d18">
+    <meta name="description" content="Browse the ACLC College of Sta. Maria academic program index.">
+    <title>Academic Program Index | ACLC College of Sta. Maria</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="stylesheet" href="assets/css/portal.css">
+    <script>
+        window.tailwind = { config: { corePlugins: { preflight: false } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/css/js/portal.js" defer></script>
+</head>
+<body class="terminal-page catalog-page">
+    <a class="skip-link" href="#program-index">Skip to program index</a>
+    <div class="portal-shell">
+        <header class="portal-bar">
+            <a class="portal-brand" href="index.html" aria-label="Return to the ACLC campus archive">
+                <img src="assets/logo.png" alt="" width="38" height="38">
+                <span><strong>ACLC</strong><small>STA. MARIA / CAMPUS ARCHIVE</small></span>
+            </a>
+            <a class="terminal-return" href="index.html">[ RETURN TO ARCHIVE ]</a>
+        </header>
+
+        <main class="terminal-content catalog-content" id="program-index">
+            <section class="catalog-heading" aria-labelledby="index-title">
+                <p class="panel-index">RECOVERED FILE <span>ACADEMIC INDEX / 01</span></p>
+                <p class="eyebrow">SCHOOL RECORDS / ACADEMIC PATHWAYS</p>
+                <h1 id="index-title">ACADEMIC_INDEX.exe</h1>
+                <p>Browse the program entries associated with ACLC College of Sta. Maria.</p>
+            </section>
+
+            <p class="catalog-note" role="note">Preview catalog only. Program availability, admission requirements, and descriptions should be confirmed with ACLC College of Sta. Maria.</p>
+
+            <div class="program-tools" aria-label="Search and filter academic programs">
+                <label class="program-search" for="program-search">
+                    <span>SEARCH THE INDEX</span>
+                    <input id="program-search" type="search" placeholder="Try “computer” or “academic”" autocomplete="off" data-program-search>
+                </label>
+                <div class="program-filters" role="group" aria-label="Filter programs by level">
+                    <button type="button" data-program-filter="all" aria-pressed="true">ALL</button>
+                    <button type="button" data-program-filter="shs" aria-pressed="false">SENIOR HIGH</button>
+                    <button type="button" data-program-filter="college" aria-pressed="false">COLLEGE</button>
+                </div>
+                <p class="program-results" data-program-results role="status" aria-live="polite">Showing 6 programs</p>
+            </div>
+
+            <p class="program-empty" data-program-empty role="status" hidden>No matching programs. Try a different search or filter.</p>
+
+            <section class="program-section" data-program-section="shs" aria-labelledby="senior-high-title">
+                <h2 id="senior-high-title">01 / SENIOR HIGH SCHOOL</h2>
+                <div class="program-grid">
+                    <article class="program-card" data-program-card data-program-category="shs">
+                        <span class="program-card__code">ACADEMIC TRACK / SENIOR HIGH</span>
+                        <h3>Academic Track</h3>
+                        <p>A pathway focused on core academic subjects and preparation for further study.</p>
+                    </article>
+                    <article class="program-card" data-program-card data-program-category="shs">
+                        <span class="program-card__code">TECHPRO TRACK / SENIOR HIGH</span>
+                        <h3>TechPro Track</h3>
+                        <p>A technical-vocational pathway centered on technology and professional skills.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="program-section" data-program-section="college" aria-labelledby="college-title">
+                <h2 id="college-title">02 / COLLEGE PROGRAMS</h2>
+                <div class="program-grid">
+                    <article class="program-card" data-program-card data-program-category="college">
+                        <span class="program-card__code">BSCS / COLLEGE</span>
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p>A program covering computing concepts, algorithms, and software development.</p>
+                        <button class="program-card__details" type="button" data-program-modal-id="bscs">VIEW PROGRAM DETAILS</button>
+                    </article>
+                    <article class="program-card" data-program-card data-program-category="college">
+                        <span class="program-card__code">BSAIS / COLLEGE</span>
+                        <h3>Bachelor of Science in Accounting Information System</h3>
+                        <p>A program combining accounting principles with information technology.</p>
+                        <button class="program-card__details" type="button" data-program-modal-id="bsais">VIEW PROGRAM DETAILS</button>
+                    </article>
+                    <article class="program-card" data-program-card data-program-category="college">
+                        <span class="program-card__code">BSEN / COLLEGE</span>
+                        <h3>Bachelor of Science in Entrepreneurship</h3>
+                        <p>A program focused on business development and entrepreneurship.</p>
+                        <button class="program-card__details" type="button" data-program-modal-id="bsen">VIEW PROGRAM DETAILS</button>
+                    </article>
+                    <article class="program-card" data-program-card data-program-category="college">
+                        <span class="program-card__code">ACT / COLLEGE</span>
+                        <h3>Associate in Computer Technology</h3>
+                        <p>A program covering computer hardware, networking, and introductory programming.</p>
+                        <button class="program-card__details" type="button" data-program-modal-id="act">VIEW PROGRAM DETAILS</button>
+                    </article>
+                </div>
+
+                <dialog hidden class="program-dialog program-dialog--bscs" id="bscs-details" aria-labelledby="bscs-details-title">
+                    <div class="program-dialog__hero">
+                        <button class="program-dialog__close" type="button" data-program-dialog-close aria-label="Close BSCS details">CLOSE ×</button>
+                        <p class="program-dialog__eyebrow">ACLC COLLEGE STA. MARIA / BSCS</p>
+                        <h2 id="bscs-details-title">Computer Science</h2>
+                        <p>It's what you learn that matters the most</p>
+                    </div>
+                    <div class="program-dialog__content">
+                        <h3>THE COURSE WILL COVER:</h3>
+                        <h4>Systems Development &amp; Data Analytics</h4>
+                        <ul class="program-dialog__topics">
+                            <li>C Language</li><li>Visual C++</li><li>VB.net</li><li>Python</li><li>R Programming</li><li>SAP</li>
+                        </ul>
+                        <h4>Mobile Programming</h4>
+                        <ul class="program-dialog__topics">
+                            <li>Java Programming</li><li>Android Studio</li><li>XCode</li><li>Ionic</li><li>Native Script</li>
+                        </ul>
+                        <h4>Web Applications Development</h4>
+                        <ul class="program-dialog__topics">
+                            <li>JavaScript</li><li>PHP with MySQL</li><li>Bootstrap</li><li>Laravel framework</li><li>Cloud Networking</li><li>Cyber Security</li>
+                        </ul>
+                        <h4>Game Development</h4>
+                        <ul class="program-dialog__topics">
+                            <li>C# Programming</li><li>Construct 2</li><li>Unity 3D</li><li>Click Team Fusion</li><li>Game root</li>
+                        </ul>
+                        <h3>WHY ACLC?</h3>
+                        <ul class="program-dialog__benefits">
+                            <li>Top of the Line Development Tools and Equipment</li>
+                            <li>IT Faculty composed of Industry-based and Developers</li>
+                            <li>Academe - Industry Partnership for Trainings</li>
+                        </ul>
+                    </div>
+                </dialog>
+
+                <dialog hidden class="program-dialog program-dialog--act" id="act-details" aria-labelledby="act-details-title">
+                    <div class="program-dialog__hero">
+                        <button class="program-dialog__close" type="button" data-program-dialog-close aria-label="Close ACT details">CLOSE ×</button>
+                        <p class="program-dialog__eyebrow">ACLC COLLEGE STA. MARIA / ACT</p>
+                        <h2 id="act-details-title">Associate in Computer Technology</h2>
+                    </div>
+                    <div class="program-dialog__content">
+                        <h3>THE COURSE WILL COVER:</h3>
+                        <ul class="program-dialog__topics">
+                            <li>Programmer</li><li>Statistics</li><li>Operating systems</li><li>Networking</li><li>Database management</li><li>Software engineering</li><li>Cybersecurity</li><li>System organization</li>
+                        </ul>
+                        <h3>CAREER OPPORTUNITIES</h3>
+                        <ul class="program-dialog__benefits">
+                            <li>Systems Integration Personnel</li>
+                            <li>IT Audit Personnel</li>
+                            <li>Technical Support Specialist</li>
+                            <li>Quality Assurance Specialist</li>
+                        </ul>
+                        <h3>WHY ACLC?</h3>
+                        <ul class="program-dialog__benefits">
+                            <li>Top of the Line Development Tools and Equipment</li>
+                            <li>IT Faculty composed of Industry-based and Developers</li>
+                            <li>Academe - Industry Partnership for Trainings</li>
+                        </ul>
+                    </div>
+                </dialog>
+
+                <dialog hidden class="program-dialog program-dialog--bsen" id="bsen-details" aria-labelledby="bsen-details-title">
+                    <div class="program-dialog__hero">
+                        <button class="program-dialog__close" type="button" data-program-dialog-close aria-label="Close BSEN details">CLOSE ×</button>
+                        <p class="program-dialog__eyebrow">ACLC COLLEGE STA. MARIA / BSEN</p>
+                        <h2 id="bsen-details-title">Entrepreneurship</h2>
+                    </div>
+                    <div class="program-dialog__content">
+                        <h3>THE PROGRAM WILL COVER:</h3>
+                        <h4>General Education Requirements</h4>
+                        <ul class="program-dialog__topics">
+                            <li>Intellectual and Practical Skills</li><li>Written Communication</li><li>Oral Communication</li><li>Quantitative Literacy</li><li>Civic and Global Learning</li><li>Business Ethics</li><li>Good Governance</li><li>Social Responsibility</li><li>Knowledge on Human Cultures</li>
+                        </ul>
+                        <h4>Professional Business Requirements</h4>
+                        <ul class="program-dialog__topics">
+                            <li>Financial Accounting</li><li>Financial Management</li><li>Managerial Accounting</li><li>Business Law</li><li>Computer Concepts</li><li>International Management</li><li>Macroeconomics</li><li>Microeconomics</li><li>Human Resource Mgt.</li><li>Organizational Behavior</li><li>Organizational Dev't</li><li>Advance Labor Relations</li><li>Labor Law</li><li>Public Relations</li>
+                        </ul>
+                        <h3>WHY ACLC?</h3>
+                        <ul class="program-dialog__benefits">
+                            <li>Competent College Instructors who are Licensed Certified Public Accountant</li>
+                            <li>Inclusive with National Certificate (NC) Assessment</li>
+                            <li>Academe - Industry Partnership for Trainings</li>
+                        </ul>
+                    </div>
+                </dialog>
+
+                <dialog hidden class="program-dialog program-dialog--bsais" id="bsais-details" aria-labelledby="bsais-details-title">
+                    <div class="program-dialog__hero">
+                        <button class="program-dialog__close" type="button" data-program-dialog-close aria-label="Close BSAIS details">CLOSE ×</button>
+                        <p class="program-dialog__eyebrow">ACLC COLLEGE STA. MARIA / BSAIS</p>
+                        <h2 id="bsais-details-title">Accounting Information System</h2>
+                    </div>
+                    <div class="program-dialog__content">
+                        <h3>THE PROGRAM WILL COVER:</h3>
+                        <h4>Basic Accounting and Finance Core</h4>
+                        <ul class="program-dialog__topics">
+                            <li>Microeconomics</li><li>Macroeconomics</li><li>Business Statistics</li><li>Qualitative Techniques in Business</li><li>Business Research and Technical Writing</li>
+                        </ul>
+                        <h4>Information Technology Education</h4>
+                        <ul class="program-dialog__topics">
+                            <li>IT Concepts and Systems Analysis</li><li>IT Concepts and Systems Analysis and Design Development</li><li>Accounting Information Systems</li><li>Auditing and CIS Environment</li>
+                        </ul>
+                        <h4>Business Law and Taxation</h4>
+                        <ul class="program-dialog__topics">
+                            <li>Law on Obligations and Contracts</li><li>Law on Negotiable Instruments</li><li>Sales, Agency, Labor and other Relevant Laws</li><li>Business and Transfer Taxes</li>
+                        </ul>
+                        <h4>Financial Management</h4>
+                        <ul class="program-dialog__topics">
+                            <li>Financial Accounting and Reporting</li><li>Cost Accounting and Management Accounting</li><li>Advance Financial Accounting and Reporting</li><li>Applied Auditing</li>
+                        </ul>
+                        <h3>ADDITIONAL INFORMATION</h3>
+                        <ul class="program-dialog__benefits">
+                            <li>Competent College Instructors who are Licensed Certified Public Accountants</li>
+                            <li>Inclusive with National Certificate (NC) Assessment</li>
+                            <li>Academe–Industry Partnership for Trainings</li>
+                        </ul>
+                    </div>
+                </dialog>
+            </section>
+
+            <section class="campus-background" aria-labelledby="campus-background-title">
+                <p class="eyebrow">CAMPUS PROFILE / STA. MARIA, BULACAN</p>
+                <h2 id="campus-background-title">About ACLC College of Sta. Maria</h2>
+                <p>Explore the college's background, mission, vision, history, academic programs, and official contact channels.</p>
+                <div class="profile-details" aria-label="Campus profile details">
+                    <button class="profile-detail-button" type="button" data-profile-dialog-target="profile-about" aria-haspopup="dialog">ABOUT ACLC <span>01</span></button>
+                    <button class="profile-detail-button" type="button" data-profile-dialog-target="profile-mission" aria-haspopup="dialog">MISSION <span>02</span></button>
+                    <button class="profile-detail-button" type="button" data-profile-dialog-target="profile-vision" aria-haspopup="dialog">VISION <span>03</span></button>
+                    <button class="profile-detail-button" type="button" data-profile-dialog-target="profile-history" aria-haspopup="dialog">HISTORY &amp; PROGRAMS <span>04</span></button>
+                    <button class="profile-detail-button" type="button" data-profile-dialog-target="profile-contact" aria-haspopup="dialog">CONTACT &amp; INQUIRIES <span>05</span></button>
+                </div>
+            </section>
+
+            <dialog class="profile-dialog" id="profile-about" aria-labelledby="profile-about-title">
+                <div class="profile-dialog__header">
+                    <p class="eyebrow">CAMPUS PROFILE / 01</p>
+                    <button class="profile-dialog__close" type="button" data-profile-dialog-close aria-label="Close About ACLC details">×</button>
+                    <h2 id="profile-about-title">About ACLC College of Sta. Maria</h2>
+                </div>
+                <p>ACLC College of Sta. Maria is a higher education institution in Sta. Maria, Bulacan, Philippines. Founded in 2013, it is part of the AMA Education System, a Philippine educational network recognized for its emphasis on information technology, computer education, and career-oriented learning.</p>
+                <p>The college aims to equip students with the knowledge, practical skills, and professional competencies to succeed in their chosen fields and contribute to society.</p>
+            </dialog>
+
+            <dialog class="profile-dialog" id="profile-mission" aria-labelledby="profile-mission-title">
+                <div class="profile-dialog__header">
+                    <p class="eyebrow">CAMPUS PROFILE / 02</p>
+                    <button class="profile-dialog__close" type="button" data-profile-dialog-close aria-label="Close Mission details">×</button>
+                    <h2 id="profile-mission-title">Mission</h2>
+                </div>
+                <p>To provide a holistic, relevant, quality and globally recognized IT-based education in all levels and disciplines with the objective of producing professionals and leaders responsive to the needs of Science and the international community cognizant of the welfare and benefits of its men and women thereby realizing their potential as productive members of the society for the honor and glory of God Almighty.</p>
+            </dialog>
+
+            <dialog class="profile-dialog" id="profile-vision" aria-labelledby="profile-vision-title">
+                <div class="profile-dialog__header">
+                    <p class="eyebrow">CAMPUS PROFILE / 03</p>
+                    <button class="profile-dialog__close" type="button" data-profile-dialog-close aria-label="Close Vision details">×</button>
+                    <h2 id="profile-vision-title">Vision</h2>
+                </div>
+                <p>To be the leader and dominant provider of relevant globally recognized information technology-based education and related services in the global market.</p>
+            </dialog>
+
+            <dialog class="profile-dialog" id="profile-history" aria-labelledby="profile-history-title">
+                <div class="profile-dialog__header">
+                    <p class="eyebrow">CAMPUS PROFILE / 04</p>
+                    <button class="profile-dialog__close" type="button" data-profile-dialog-close aria-label="Close History and Programs details">×</button>
+                    <h2 id="profile-history-title">History &amp; Educational Role</h2>
+                </div>
+                <h3>Establishment and community</h3>
+                <p>Founded in 2013, ACLC College of Sta. Maria is part of the AMA Education System and its broader commitment to technology-focused education, computer literacy, and career preparation. Located in Sta. Maria, Bulacan, the college serves students pursuing higher education and professional development. It is included in educational institution listings under CHED Regional Office III.</p>
+                <h3>Academic programs</h3>
+                <ul>
+                    <li>Bachelor of Science in Computer Science (BSCS)</li>
+                    <li>Bachelor of Science in Accounting Information System (BSAIS)</li>
+                    <li>Bachelor of Science in Entrepreneurship (BSEN)</li>
+                    <li>Associate in Computer Technology (ACT)</li>
+                </ul>
+                <p>Guided by its mission and vision, the college aims to deliver relevant, quality, globally recognized IT-based education and help students become productive professionals and responsible members of society.</p>
+            </dialog>
+
+            <dialog class="profile-dialog" id="profile-contact" aria-labelledby="profile-contact-title">
+                <div class="profile-dialog__header">
+                    <p class="eyebrow">CAMPUS PROFILE / 05</p>
+                    <button class="profile-dialog__close" type="button" data-profile-dialog-close aria-label="Close Contact details">×</button>
+                    <h2 id="profile-contact-title">Institutional Information &amp; Inquiries</h2>
+                </div>
+                <p>For additional information about the college's history, founding, academic programs, and institutional milestones, contact the school through its official channels.</p>
+                <dl class="profile-contact-list">
+                    <div><dt>Official website</dt><dd><a href="https://aclcsm.com/aclc_portal/" target="_blank" rel="noopener noreferrer">ACLC College of Sta. Maria ↗</a></dd></div>
+                    <div><dt>Email</dt><dd><a href="mailto:sd_stamariacollege@ama.edu.ph">sd_stamariacollege@ama.edu.ph</a></dd></div>
+                    <div><dt>Telephone</dt><dd><a href="tel:09171366167">0917-136-6167</a></dd></div>
+                </dl>
+            </dialog>
+        </main>
+
+        <footer class="portal-footer">
+            <a href="index.html">← BACK TO CAMPUS ARCHIVE</a>
+            <span>ACLC COLLEGE OF STA. MARIA</span>
+        </footer>
+    </div>
+    <div id="program-modal-root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="assets/js/program-modal.jsx"></script>
+</body>
+</html>
