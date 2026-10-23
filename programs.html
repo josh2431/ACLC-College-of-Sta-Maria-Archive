@@ -9,6 +9,16 @@
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="stylesheet" href="assets/css/portal.css">
     <script>
+        try {
+            if (sessionStorage.getItem("aclc-programs-entry") !== "granted") {
+                window.location.replace("index.html");
+            }
+        } catch (error) {
+            console.error("Unable to verify program page access.", error);
+            window.location.replace("index.html");
+        }
+    </script>
+    <script>
         window.tailwind = { config: { corePlugins: { preflight: false } } };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -288,6 +298,11 @@
                 </dl>
             </dialog>
         </main>
+
+        <footer class="portal-footer">
+            <a href="index.html">← BACK TO CAMPUS ARCHIVE</a>
+            <span>ACLC COLLEGE OF STA. MARIA</span>
+        </footer>
     </div>
     <div id="program-modal-root"></div>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
